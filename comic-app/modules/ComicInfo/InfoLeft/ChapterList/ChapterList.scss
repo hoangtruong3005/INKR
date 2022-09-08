@@ -1,7 +1,7 @@
 .chapter-list {
   width: auto;
   height: auto;
-  padding: 24px;
+  padding: 24px 0;
 
   display: flex;
   align-items: flex-start;
@@ -26,14 +26,16 @@
     font-weight: 500;
     line-height: 28px;
 
+    padding: 0 24px;
     color: rgba(255, 255, 255, 0.85);
   }
 
-  &__sub {
+  &__subtitle {
     font-size: 14px;
     font-weight: 400;
     line-height: 22px;
 
+    padding: 0 24px;
     color: rgba(255, 255, 255, 0.65);
     opacity: 0.8;
   }

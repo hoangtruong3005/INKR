@@ -94,8 +94,6 @@ const chapters = [
 ];
 
 const ChapterList: React.FC<ComicProps> = () => {
-  const date = new Date();
-  console.log(date.getTime())
   const renderLastedList = () => {
     return chapters_lasted.map((el) => <ChapterItem modes={['RELATED']} chapter={el} key={`${el?.id}`} />);
   };

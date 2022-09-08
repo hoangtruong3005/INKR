@@ -1,10 +1,25 @@
 .chapter-item {
   width: 100%;
   height: auto;
-  padding: 12px;
+  padding: 0 12px;
 
   display: flex;
+  position: relative;
   flex-wrap: nowrap;
+
+  &--related {
+    background: none !important;
+
+    .wrapper {
+      background: #1F1F1F;
+      border-radius: 8px;
+    }
+  }
+
+  &:first-child {
+    background: #1F1F1F;
+  }
+
 
   &__bg {
     width: 78px;
@@ -93,6 +108,16 @@
     p {
       margin: 0;
     }
+  }
+
+  .wrapper {
+    width: 100%;
+    height: auto;
+    padding: 12px;
+
+    display: flex;
+    position: relative;
+    flex-wrap: nowrap;
   }
 
   .price {
