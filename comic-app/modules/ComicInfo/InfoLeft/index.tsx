@@ -1,5 +1,6 @@
 import React from "react";
 import BasicInfo from "./BasicInfo";
+import ChapterList from "./ChapterList";
 import BasicPromotion from "./BasicPromotion";
 
 declare interface ComicProps {}
@@ -16,7 +17,7 @@ const InfoLeft: React.FC<ComicProps> = () => {
       </div>
 
       <div>
-        Chapter List
+        <ChapterList />
       </div>
     </div>
   );

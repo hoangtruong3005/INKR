@@ -6,17 +6,6 @@ import Currency from "@/public/svg/currency.svg";
 
 declare interface ComicProps {}
 
-// const data = [
-//   {
-//     title: '3 chapters ',
-//     tag: 'FREE',
-//     amount: {
-//       total_chapters: 7,
-//       pay_per_chapter: ''
-//     }
-//   }
-// ];
-
 const basic_price = {
   total_discount: "3",
   total_chapters: 7,

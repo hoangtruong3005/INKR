@@ -1,0 +1,45 @@
+.chapter-list {
+  width: auto;
+  height: auto;
+  padding: 24px;
+
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+
+  background: #141414;
+  border-radius: 8px;
+
+  & > div {
+    & + div {
+      margin-top: 23px;
+    }
+  }
+
+  &__lasted, &__release {
+    width: 100%;
+    height: auto;
+  }
+
+  &__title {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 28px;
+
+    color: rgba(255, 255, 255, 0.85);
+  }
+
+  &__sub {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+
+    color: rgba(255, 255, 255, 0.65);
+    opacity: 0.8;
+  }
+
+  &__contents {
+    width: 100%;
+    height: auto;
+  }
+}

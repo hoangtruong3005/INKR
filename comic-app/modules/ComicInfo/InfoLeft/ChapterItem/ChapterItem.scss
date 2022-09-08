@@ -1,0 +1,50 @@
+.chapter-item {
+  width: 100%;
+  height: auto;
+  padding: 12px;
+
+  display: flex;
+  flex-wrap: nowrap;
+
+  &__bg {
+    width: 78px;
+    height: 62px;
+    border-radius: 4px;
+
+    position: relative;
+  }
+
+  &__content {
+    height: auto;
+    flex-grow: 1;
+    padding-left: 12px;
+
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__left, &__right {
+    width: 50%;
+    height: auto;
+  }
+
+  &__right {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    p {
+      margin: 0;
+    }
+  }
+
+  .price {
+    margin-right: 4px;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
