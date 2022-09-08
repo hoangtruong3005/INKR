@@ -1,0 +1,25 @@
+@import './InfoLeft/InfoLeft.scss';
+
+.comic-info {
+  @media only screen and (min-width: 992px) {
+    width: 960px;
+    height: auto;
+    padding: 27px 0;
+
+    display: grid;
+    grid-template-columns: 15fr 9fr;
+
+    &__left {
+      margin-right: 32px;
+    }
+  }
+
+  @media only screen and (min-width: 1200px) {
+    width: 1168px;
+    grid-template-columns: 16fr 8fr;
+  }
+
+  @media only screen and (min-width: 1600px) {
+    width: 1568px;
+  }
+}

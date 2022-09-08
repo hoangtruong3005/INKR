@@ -1,0 +1,16 @@
+@import './BasicInfo/BasicInfo.scss';
+@import './BasicPromotion/BasicPromotion.scss';
+
+.info-left {
+  left: auto;
+  width: auto;
+
+  display: flex;
+  flex-direction: column;
+
+  & > div {
+    & + div {
+      margin-top: 24px;
+    }
+  }
+}
