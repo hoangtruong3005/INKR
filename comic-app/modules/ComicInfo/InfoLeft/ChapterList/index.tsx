@@ -5,11 +5,25 @@ import ChapterThumbnail from '@/public/svg/Chapter_thumbnail.svg';
 
 declare interface ComicProps {}
 
+const chapters_lasted = [
+  {
+    id: "abc",
+    url_image: ChapterThumbnail?.src,
+    read_date: "09/07/2022",
+    release_date: "",
+    price: null,
+    is_read: true,
+    status: "ACTIVATED",
+    title: "Chapter 1",
+    percent_completed: 90,
+  },
+];
+
 const chapters = [
   {
     id: "abc",
     url_image: ChapterThumbnail?.src,
-    read_date: "",
+    read_date: "09/07/2022",
     release_date: "",
     price: null,
     is_read: true,
@@ -25,14 +39,68 @@ const chapters = [
     release_date: "",
     price: null,
     is_read: false,
-    status: "LOCKED",
+    status: "ACTIVATED",
     title: "Chapter 2",
+    percent_completed: 0,
+  },
+
+  {
+    id: "xyz1",
+    url_image: ChapterThumbnail?.src,
+    read_date: "",
+    release_date: "",
+    price: null,
+    is_read: false,
+    status: "ACTIVATED",
+    title: "Chapter 3",
+    percent_completed: 0,
+  },
+
+  {
+    id: "xyz2",
+    url_image: ChapterThumbnail?.src,
+    read_date: "",
+    release_date: "",
+    price: '5',
+    is_read: false,
+    status: "LOCKED",
+    title: "Chapter 4",
+    percent_completed: 0,
+  },
+
+  {
+    id: "xyz3",
+    url_image: ChapterThumbnail?.src,
+    read_date: "",
+    release_date: "",
+    price: '5',
+    is_read: false,
+    status: "LOCKED",
+    title: "Chapter 5",
+    percent_completed: 0,
+  },
+
+  {
+    id: "xyz4",
+    url_image: ChapterThumbnail?.src,
+    read_date: "",
+    release_date: "",
+    price: '5',
+    is_read: false,
+    status: "LOCKED",
+    title: "Chapter 6",
     percent_completed: 0,
   },
 ];
 
 const ChapterList: React.FC<ComicProps> = () => {
+  const date = new Date();
+  console.log(date.getTime())
   const renderLastedList = () => {
+    return chapters_lasted.map((el) => <ChapterItem modes={['RELATED']} chapter={el} key={`${el?.id}`} />);
+  };
+
+  const renderReleaseList = () => {
     return chapters.map((el) => <ChapterItem chapter={el} key={`${el?.id}`} />);
   };
 
@@ -48,7 +116,7 @@ const ChapterList: React.FC<ComicProps> = () => {
         <h4 className="chapter-list__title">10 chapters</h4>
         <p className="chapter-list__subtitle">New chapter every Thursday </p>
 
-        <div className="chapter-list__contents">{renderLastedList()}</div>
+        <div className="chapter-list__contents">{renderReleaseList()}</div>
       </div>
     </div>
   );
