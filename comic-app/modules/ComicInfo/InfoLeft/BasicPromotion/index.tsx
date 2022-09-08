@@ -95,16 +95,16 @@ const BasicPromotion: React.FC<ComicProps> = () => {
 
         <div className="right">
           <div>
-            <div>
-              -{promotion_price.discount_percent}%
-            </div>
+            <div>-{promotion_price.discount_percent}%</div>
             <div>
               <span className="price">
                 <Image width={16} height={16} alt="coin" src={Coin?.src} />
               </span>
 
               <span className="price--old">{promotion_price.price}</span>
-              <span className="price--new">{promotion_price.discount_price}</span>
+              <span className="price--new">
+                {promotion_price.discount_price}
+              </span>
             </div>
           </div>
 
@@ -128,6 +128,13 @@ const BasicPromotion: React.FC<ComicProps> = () => {
           </div>
 
           {renderPromotionPrice()}
+        </div>
+      </div>
+
+      <div className="basic-promotion__more">
+        <div>
+          <span>Want to read for free</span>
+          <span>? Learn more </span>
         </div>
       </div>
     </div>
