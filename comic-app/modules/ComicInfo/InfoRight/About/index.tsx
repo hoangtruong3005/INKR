@@ -14,13 +14,32 @@ import Avatar2 from "@/public/svg/details/default-2.svg";
 
 declare interface ComicProps {}
 
-const genres = [
+declare type genresType = {
+  label: string;
+};
+
+declare type detailType = {
+  src: string;
+};
+
+declare type creditType = {
+  title: string;
+  author: string;
+  avatar_url: string;
+};
+
+declare type factType = {
+  title: string;
+  content: string;
+};
+
+const genres: genresType[] = [
   { label: "Horror" },
   { label: "Psychological" },
   { label: "Seinen" },
 ];
 
-const details = [
+const details: detailType[] = [
   { src: Detail1?.src },
   { src: Detail2?.src },
   { src: Detail3?.src },
@@ -28,13 +47,13 @@ const details = [
   { src: Detail5?.src },
 ];
 
-const credits = [
+const credits: creditType[] = [
   { avatar_url: Avatar?.src, author: "Kodansha", title: "Publisher" },
   { avatar_url: Avatar1?.src, author: "Kodansha", title: "Publisher" },
   { avatar_url: Avatar2?.src, author: "Kodansha", title: "Publisher" },
 ];
 
-const facts = [
+const facts: factType[] = [
   { title: "Last Updated", content: "2 days ago" },
   { title: "Age Rating", content: "Mature (18+)" },
   { title: "Color", content: "Black & White" },

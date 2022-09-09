@@ -5,7 +5,7 @@ import {
   SortAscendingOutlined
 } from '@ant-design/icons';
 
-import ChapterItem from "@/modules/ComicInfo/InfoLeft/ChapterItem";
+import ChapterItem from "@/components/ChapterItem";
 import ChapterThumbnail from "@/public/svg/Chapter_thumbnail.svg";
 
 declare interface ComicProps {}

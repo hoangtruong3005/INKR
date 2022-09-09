@@ -6,20 +6,34 @@ import Currency from "@/public/svg/currency.svg";
 
 declare interface ComicProps {}
 
-const basic_price = {
+declare type basicPriceType = {
+  total_discount: string;
+  total_chapters: number;
+  pay_per_chapter: number;
+};
+
+
+declare type promotionPriceType = {
+  title: string;
+  price: number;
+  discount_price: number;
+  discount_percent: number
+};
+
+const basic_price: basicPriceType = {
   total_discount: "3",
   total_chapters: 7,
   pay_per_chapter: 5,
 };
 
-const promotion_price = {
+const promotion_price: promotionPriceType = {
   title: "Save money with INKR Extra ",
   price: 18,
   discount_price: 35,
   discount_percent: 50,
 };
 
-const total_price = 35;
+const total_price: number = 35;
 
 const BasicPromotion: React.FC<ComicProps> = () => {
   const renderBasicPrice = () => (

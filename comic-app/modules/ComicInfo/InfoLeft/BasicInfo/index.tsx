@@ -1,4 +1,4 @@
-import React from "react";
+import React, { ReactElement } from "react";
 import BgImage from "@/public/svg/bg.svg";
 
 import {
@@ -10,7 +10,18 @@ import {
 
 declare interface ComicProps {}
 
-const data = {
+declare type reactionType = {
+  icon: ReactElement;
+  count: string;
+};
+
+declare type authorType = {
+  title: string;
+  author: string;
+  total_chapters: number;
+};
+
+const data: authorType = {
   title: "Kasane",
   author: "By Kodansha",
   total_chapters: 10,
@@ -18,7 +29,7 @@ const data = {
 
 const hashtags: string[] = ["18", "NEW", "TRENDING", "BESTSELLER", "MANGA"];
 
-const reactions = [
+const reactions: reactionType[] = [
   { icon: <ReadOutlined />, count: "74.483" },
   { icon: <LikeOutlined />, count: "15,863" },
 ]

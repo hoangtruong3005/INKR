@@ -6,11 +6,19 @@ import OwnerUrl from "@/public/svg/owner.svg";
 import AuthorUrl from "@/public/svg/author.svg";
 import CommentCard from "@/components/CommentCard";
 
-declare interface ComicProps {}
+declare interface CommentProps {}
 
-const data = [
+declare type CommentCardType = {
+  author: string;
+  message: string;
+  image_url: string;
+  created_date: string;
+  total_liked: number;
+  total_reply: number;
+};
+
+const data: CommentCardType[] = [
   {
-    title: "Title Name 1",
     created_date: "PREQUEL",
     image_url: AuthorUrl?.src,
     total_liked: 45.6,
@@ -21,7 +29,7 @@ const data = [
   },
 ];
 
-const Comment: React.FC<ComicProps> = () => {
+const Comment: React.FC<CommentProps> = () => {
   const renderRelatedList = () => {
     return data.map((el, index) => (
       <div key={index}>
