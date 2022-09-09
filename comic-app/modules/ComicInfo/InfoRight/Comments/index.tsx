@@ -43,7 +43,7 @@ const Comment: React.FC<ComicProps> = () => {
       </div>
 
       <div className="comments__submit">
-        <Button icon={<SendOutlined />}>send</Button>
+        <Button icon={<SendOutlined />}>Add Comment</Button>
       </div>
     </div>
   );

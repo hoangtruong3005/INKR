@@ -10,14 +10,23 @@
     display: grid;
     grid-template-columns: 15fr 9fr;
 
+    &__left, &__right {
+      width: 100%;
+      overflow: hidden;
+    };
+
     &__left {
-      margin-right: 32px;
+      padding-right: 16px;
     }
   }
 
   @media only screen and (min-width: 1200px) {
     width: 1168px;
     grid-template-columns: 16fr 8fr;
+
+    &__left {
+      padding-right: 32px;
+    }
   }
 
   @media only screen and (min-width: 1600px) {
