@@ -1,5 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
-import React from "react";
+import React, { useState } from "react";
+import classnames from 'classnames';
 
 import Detail1 from "@/public/svg/details/detail_1.svg";
 import Detail2 from "@/public/svg/details/detail_2.svg";
@@ -44,6 +45,8 @@ const facts = [
 ];
 
 const About: React.FC<ComicProps> = () => {
+  const [hasMore, setHasMore] = useState<boolean>(false);
+
   const renderGenres = () => {
     return genres?.map((el, index) => <div key={index}>{el?.label}</div>);
   };
@@ -97,7 +100,11 @@ const About: React.FC<ComicProps> = () => {
             with this.
           </div>
 
-          <div className="about__more">
+          <div
+            className={classnames("about__more", {
+              "about__more--show": hasMore,
+            })}
+          >
             <div className="images">{renderImages()}</div>
 
             <div className="credits">
@@ -113,9 +120,11 @@ const About: React.FC<ComicProps> = () => {
             </div>
           </div>
 
-          <div className="about__action">
-            <div>Show More</div>
-          </div>
+          {!hasMore && (
+            <div className="about__action">
+              <div onClick={() => setHasMore((state) => !state)}>Show More</div>
+            </div>
+          )}
         </div>
       </div>
     </div>
