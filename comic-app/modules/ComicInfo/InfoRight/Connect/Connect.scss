@@ -1,0 +1,39 @@
+.connect {
+  width: 100%;
+  height: auto;
+  padding: 24px 24px 8px 24px;
+
+  background: #141414;
+  border-radius: 8px;
+
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+
+  &__bg {
+    width: 116px;
+    height: 116px;
+    min-width: 116px;
+    min-height: 116px;
+
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+
+    box-sizing: border-box;
+    background-size: auto auto;
+
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .des {
+    font-size: 14px;
+    line-height: 22px;
+
+    opacity: 0.8;
+    font-style: normal;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.65);
+  }
+}
