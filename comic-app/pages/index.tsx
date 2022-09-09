@@ -1,5 +1,5 @@
 import type { NextPage } from "next";
-import ComicInfo from "../modules/ComicInfo";
+import ComicInfo from "@/modules/ComicInfo";
 
 const Home: NextPage = () => {
   return (

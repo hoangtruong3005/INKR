@@ -10,7 +10,21 @@ import ChapterThumbnail from "@/public/svg/Chapter_thumbnail.svg";
 
 declare interface ComicProps {}
 
-const chapters_lasted = [
+declare type chapterType = {
+  id: string | number;
+  url_image: string;
+  read_date: string;
+
+  price: string | null;
+  title: string;
+  status: string;
+
+  is_read: boolean;
+  release_date: string;
+  percent_completed: number;
+};
+
+const chapters_lasted: chapterType[] = [
   {
     id: "abc",
     url_image: ChapterThumbnail?.src,
@@ -24,7 +38,7 @@ const chapters_lasted = [
   },
 ];
 
-const chapters = [
+const chapters: chapterType[] = [
   {
     id: "abc",
     url_image: ChapterThumbnail?.src,
