@@ -1,0 +1,122 @@
+.comment-card {
+  width: 100%;
+  height: auto;
+
+  display: flex;
+  flex-wrap: nowrap;
+
+  &__bg {
+    width: 32px;
+    height: 32px;
+    min-width: 32px;
+    min-height: 32px;
+
+    overflow: hidden;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+
+    box-sizing: border-box;
+    background-size: auto auto;
+
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &__content {
+    flex-grow: 1;
+    height: auto;
+
+    padding-left: 16px;
+  }
+
+  &__author {
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+
+    color: rgba(255, 255, 255, 0.45);
+    line-height: 18px;
+
+    &>span {
+      font-size: 11px;
+      font-style: normal;
+      font-weight: 400;
+
+      color: #434343;
+      line-height: 18px;
+    }
+  }
+
+  &__message {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+
+    color: rgba(255, 255, 255, 0.85);
+    padding-top: 4px;
+    line-height: 22px;
+  }
+
+  &__reactions {
+    width: 100%;
+    height: auto;
+    padding-top: 12px;
+
+    display: flex;
+    flex-wrap: nowrap;
+
+    &>div {
+      &+div {
+        padding-left: 10px;
+      }
+
+      span {
+        font-size: 12px;
+        font-style: normal;
+        line-height: 22px;
+
+        font-weight: 400;
+        color: rgba(255, 255, 255, 0.45);
+
+        &>svg {
+          color: rgba(255, 255, 255, 0.85);
+          cursor: pointer;
+          user-select: none;
+          transition: transform .4s ease-in-out;
+      
+          &:focus,
+          &:active,
+          &:visited {
+            transform: translate(2px, 3px);
+          }
+        }
+
+        &+span {
+          padding-left: 8px;
+        }
+      }
+    }
+  }
+
+  .action {
+    font-size: 14px;
+    line-height: 22px;
+    padding-left: 10px;
+
+    color: rgba(255, 255, 255, 0.45);
+    transition: transform .4s ease-in-out;
+    font-weight: 500;
+
+    cursor: pointer;
+    user-select: none;
+
+    &:focus,
+    &:active,
+    &:visited {
+      transform: translate(2px, 3px);
+    }
+  }
+}
