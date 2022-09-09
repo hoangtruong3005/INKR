@@ -1,10 +1,22 @@
-import React from 'react';
+import React from "react";
+import About from "./About";
 
-declare interface ComicProps {};
+declare interface ComicProps {}
 
 const InfoRight: React.FC<ComicProps> = () => {
+  return (
+    <div className="info-right">
+      <div>
+        <About />
+      </div>
 
-  return <div>Info Right</div>
+      <div>Related</div>
+
+      <div>Comment</div>
+
+      <div>Connect</div>
+    </div>
+  );
 };
 
 export default InfoRight;

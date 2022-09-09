@@ -1,5 +1,23 @@
 @import '../modules/ComicInfo/ComicInfo.scss';
 
+h4 {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 28px;
+
+  color: rgba(255, 255, 255, 0.85);
+}
+
+h5 {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+
+  color: rgba(255, 255, 255, 0.85);
+  display: flex;
+  align-items: center;
+}
+
 .comic-app {
   font-weight: 400;
   min-width: 100vw;
@@ -7,7 +25,7 @@
 
   margin: 0;
   padding: 0;
-  background: #242424;
+  background: #000000;
 
   font-size: 14px;
   font-style: normal;
