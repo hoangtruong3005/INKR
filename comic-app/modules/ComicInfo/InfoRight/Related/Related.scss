@@ -1,0 +1,24 @@
+.related {
+  width: 100%;
+  height: auto;
+  padding: 24px 24px 8px 24px;
+
+  background: #141414;
+  border-radius: 8px;
+
+  &__list {
+    &>div {
+      // padding: 16px 0;
+    }
+  }
+
+  .rectangle {
+    width: 100%;
+    padding: 16px 0;
+
+    &>div {
+      width: 100%;
+      border-top: 1px solid rgba(255, 255, 255, 0.12);
+    }
+  }
+}

@@ -1,5 +1,6 @@
 import React from "react";
 import About from "./About";
+import Related from "./Related";
 
 declare interface ComicProps {}
 
@@ -10,7 +11,9 @@ const InfoRight: React.FC<ComicProps> = () => {
         <About />
       </div>
 
-      <div>Related</div>
+      <div>
+        <Related />
+      </div>
 
       <div>Comment</div>
 
